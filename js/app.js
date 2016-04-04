@@ -4,7 +4,7 @@ window.$ = require("jquery");
 var _tpl = require("lodash/template");
 
 $(document).ready(function() {
-    render(data);
+    render(response.data);
 });
 
 var render = function(data) {
