@@ -14,19 +14,24 @@
                         <td class="canidates--empty">
                         </td>
                         <td class="canidates--canidate">
-                            Hilary Clinton
+                            <img class="canidate--image" src="http://library.unn.edu.ng/wp-content/uploads/sites/42/2016/03/prifile-pic.png">
+                            Clinton
                         </td>
                         <td class="canidates--canidate">
-                            Bernie Sanders
+                            <img class="canidate--image" src="http://library.unn.edu.ng/wp-content/uploads/sites/42/2016/03/prifile-pic.png">
+                            Sanders
                         </td>
                         <td class="canidates--canidate">
-                            Ted Cruz
+                            <img class="canidate--image" src="http://library.unn.edu.ng/wp-content/uploads/sites/42/2016/03/prifile-pic.png">
+                            Cruz
                         </td>
                         <td class="canidates--canidate">
-                            John Kasich
+                            <img class="canidate--image" src="http://library.unn.edu.ng/wp-content/uploads/sites/42/2016/03/prifile-pic.png">
+                            Kasich
                         </td>
                         <td class="canidates--canidate">
-                            Donald Trump
+                            <img class="canidate--image" src="http://library.unn.edu.ng/wp-content/uploads/sites/42/2016/03/prifile-pic.png">
+                            Trump
                         </td>
                     </tr>
                 </table>
@@ -45,20 +50,20 @@
     <script type="text/template" id="template--category">
         <tr class="poll--category">
             <td class="category--name"><%= category %></td>
-            <td class="category--result" style="background:rgba(18,100,181,<%= hc %>)">
-                <span class="result--percent"><% print(Math.round(parseFloat(hc,10) * 100)); %>%</span>
+            <td class="category--result" style="background:rgba(18,100,181,<% print(clinton !== "-" ? clinton : 0); %>)">
+                <span class="result--percent"><% print(clinton !== "-" ? Math.round(parseFloat(clinton,10) * 100) + "%" : "-"); %></span>
             </td>
-            <td class="category--result" style="background:rgba(18,100,181,<%= bs %>)">
-                <span class="result--percent"><% print(Math.round(parseFloat(bs,10) * 100)); %>%</span>
+            <td class="category--result" style="background:rgba(18,100,181,<% print(sanders !== "-" ? sanders : 0); %>)">
+                <span class="result--percent"><% print(sanders !== "-" ? Math.round(parseFloat(sanders,10) * 100) + "%" : "-"); %></span>
             </td>
-            <td class="category--result" style="background:rgba(181,32,22,<%= tc %>)">
-                <span class="result--percent"><% print(Math.round(parseFloat(tc,10) * 100)); %>%</span>
+            <td class="category--result" style="background:rgba(181,32,22,<% print(cruz !== "-" ? cruz  : 0); %>)">
+                <span class="result--percent"><% print(cruz !== "-" ? Math.round(parseFloat(cruz,10) * 100) + "%" : "-"); %></span>
             </td>
-            <td class="category--result" style="background:rgba(181,32,22,<%= jk %>)">
-                <span class="result--percent"><% print(Math.round(parseFloat(jk,10) * 100)); %>%</span>
+            <td class="category--result" style="background:rgba(181,32,22,<% print(kasich !== "-" ? kasich : 0); %>)">
+                <span class="result--percent"><% print(kasich !== "-" ? Math.round(parseFloat(kasich,10) * 100) + "%" : "-"); %></span>
             </td>
-            <td class="category--result" style="background:rgba(181,32,22,<%= dt %>)">
-                <span class="result--percent"><% print(Math.round(parseFloat(dt,10) * 100)); %>%</span>
+            <td class="category--result" style="background:rgba(181,32,22,<% print(trump !== "-" ? trump : 0); %>)">
+                <span class="result--percent"><% print(trump !== "-" ? Math.round(parseFloat(trump,10) * 100) + "%" : "-"); %></span>
             </td>
         </tr>
     </script>

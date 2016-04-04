@@ -28,6 +28,11 @@
                 display: inline-block;
                 width: 15%;
                 text-align: center;
+
+                .canidate--image {
+                    width: 100%;
+                    height: auto;
+                }
             }
         }
     }
@@ -53,6 +58,9 @@
             .poll--category {
                 border-bottom: 1px solid #e5e5e5;
 
+                td:nth-child(3){
+                    border-right: 1px solid #000;
+                }
                 .category--name {
                     display: inline-block;
                     width: 20%;

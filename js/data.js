@@ -4,19 +4,19 @@ var data = [
         "categories": [
             {
                 "category": "Female",
-                "hc": ".60",
-                "bs": ".40",
-                "tc": ".30",
-                "jk": ".40",
-                "dt": ".30"
+                "clinton": ".60",
+                "sanders": ".40",
+                "cruz": ".30",
+                "kasich": ".40",
+                "trump": ".30"
             },
             {
                 "category": "Male",
-                "hc": ".20",
-                "bs": ".80",
-                "tc": ".36",
-                "jk": ".19",
-                "dt": ".45"
+                "clinton": "-",
+                "sanders": "-",
+                "cruz": ".36",
+                "kasich": ".19",
+                "trump": ".45"
             }
         ]
     },
@@ -25,35 +25,35 @@ var data = [
         "categories": [
             {
                 "category": "18-25",
-                "hc": ".6",
-                "bs": ".35",
-                "tc": ".12",
-                "jk": ".07",
-                "dt": ".89"
+                "clinton": ".6",
+                "sanders": ".35",
+                "cruz": ".12",
+                "kasich": ".07",
+                "trump": ".89"
             },
             {
                 "category": "26-35",
-                "hc": ".44",
-                "bs": ".56",
-                "tc": ".21",
-                "jk": ".67",
-                "dt": ".2"
+                "clinton": ".44",
+                "sanders": ".56",
+                "cruz": ".21",
+                "kasich": ".67",
+                "trump": ".2"
             },
             {
                 "category": "36-45",
-                "hc": ".8",
-                "bs": ".2",
-                "tc": ".33",
-                "jk": ".33",
-                "dt": ".33"
+                "clinton": ".8",
+                "sanders": ".2",
+                "cruz": ".33",
+                "kasich": ".33",
+                "trump": ".33"
             },
             {
                 "category": "46+",
-                "hc": ".1",
-                "bs": ".9",
-                "tc": ".22",
-                "jk": ".44",
-                "dt": ".34"
+                "clinton": ".1",
+                "sanders": ".9",
+                "cruz": ".22",
+                "kasich": ".44",
+                "trump": ".34"
             }
         ]
     }
