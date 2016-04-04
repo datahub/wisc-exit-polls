@@ -7,11 +7,62 @@
 </head>
 <body>
     <div class="container">
-        <div id="">
+        <div id="wiscExitPoll">
+            <div class="wep--header">
+                <table class="header--group">
+                    <tr class="header--canidates">
+                        <td class="canidates--empty">
+                        </td>
+                        <td class="canidates--canidate">
+                            Hilary Clinton
+                        </td>
+                        <td class="canidates--canidate">
+                            Bernie Sanders
+                        </td>
+                        <td class="canidates--canidate">
+                            Ted Cruz
+                        </td>
+                        <td class="canidates--canidate">
+                            John Kasich
+                        </td>
+                        <td class="canidates--canidate">
+                            Donald Trump
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="wep--polls"></div>
         </div>
     </div>
-    <script type="text/template" id="template--">
+    <script type="text/template" id="template--poll">
+        <div class="wep--poll">
+            <h2 class="poll--topic"><%= topic %></h2>
+            <table class="poll--group">
+                <%= categorieshtml %>
+            </table>
+        </div>
     </script>
+    <script type="text/template" id="template--category">
+        <tr class="poll--category">
+            <td class="category--name"><%= category %></td>
+            <td class="category--result" style="background:rgba(18,100,181,<%= hc %>)">
+                <span class="result--percent"><% print(Math.round(parseFloat(hc,10) * 100)); %>%</span>
+            </td>
+            <td class="category--result" style="background:rgba(18,100,181,<%= bs %>)">
+                <span class="result--percent"><% print(Math.round(parseFloat(bs,10) * 100)); %>%</span>
+            </td>
+            <td class="category--result" style="background:rgba(181,32,22,<%= tc %>)">
+                <span class="result--percent"><% print(Math.round(parseFloat(tc,10) * 100)); %>%</span>
+            </td>
+            <td class="category--result" style="background:rgba(181,32,22,<%= jk %>)">
+                <span class="result--percent"><% print(Math.round(parseFloat(jk,10) * 100)); %>%</span>
+            </td>
+            <td class="category--result" style="background:rgba(181,32,22,<%= dt %>)">
+                <span class="result--percent"><% print(Math.round(parseFloat(dt,10) * 100)); %>%</span>
+            </td>
+        </tr>
+    </script>
+    <script src="js/data.js"></script>
     <script src="js/bundle.js"></script>
 </body>
 </html>
