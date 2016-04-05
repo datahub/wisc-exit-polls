@@ -10,8 +10,8 @@ $(document).ready(function() {
         var response = JSON.parse(data);
         render(response.data);
     });
-
-    var top = $('.wep--stickywrapper').scrollTop();
+    /*
+    var stickyTop = $('.wep--stickywrapper').offset().top;
     $(window).scroll(function() {
         if ($(this).scrollTop() >= top) {
             $('.wep--stickywrapper').addClass('wep--fixed');
@@ -21,6 +21,7 @@ $(document).ready(function() {
             $('.wep--polls').css({marginTop:'0px'});
         }
     });
+    */
 });
 
 var render = function(data) {
