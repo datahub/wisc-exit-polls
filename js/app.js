@@ -1,10 +1,26 @@
 require("../css/styles.scss");
 
-window.$ = require("jquery");
+var $ = require("jquery");
 var _tpl = require("lodash/template");
 
 $(document).ready(function() {
-    render(response.data);
+    var url = 'http://media.dhb.io/data/wisc-april-exit-polls.json?r=';
+    var cache = Math.floor(Date.now() / 1000);
+    $.getJSON( url + cache, function( data ) {
+        var response = JSON.parse(data);
+        render(response.data);
+    });
+
+    var top = $('.wep--stickywrapper').scrollTop();
+    $(window).scroll(function() {
+        if ($(this).scrollTop() >= top) {
+            $('.wep--stickywrapper').addClass('wep--fixed');
+            $('.wep--polls').css({marginTop:$('.wep--stickywrapper').height()+'px'});
+        } else {
+            $('.wep--stickywrapper').removeClass('wep--fixed');
+            $('.wep--polls').css({marginTop:'0px'});
+        }
+    });
 });
 
 var render = function(data) {
@@ -24,6 +40,7 @@ var render = function(data) {
             var pollTpl = _tpl($('#template--poll').html());
             var phtml = pollTpl({'topic': v.topic, "categorieshtml": categoryTemplateString});
             wrapper.append(phtml);
+
         });
     }
 }

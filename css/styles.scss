@@ -9,85 +9,133 @@
 }
 
 #wiscExitPoll {
+    .wep--stickywrapper {
+        .wep--header {
+            width: 100%;
+            max-width: 1000px;
+            margin: 0 auto;
+            overflow-y: auto;
 
-    .wep--header {
-        overflow-y: auto;
+            .header--group {
+                width: 80%;
+                float: right;
+                border: 0;
+                border-collapse: collapse;
+                border-spacing: 0;
 
-        .header--group {
-            width: 80%;
-            float: right;
-            border: 0;
-            border-collapse: collapse;
-            border-spacing: 0;
+                .canidates--empty {
+                    display: inline-block;
+                    width: 20%;
+                }
+                .canidates--canidate {
+                    display: inline-block;
+                    width: 15%;
+                    text-align: center;
+                    vertical-align: bottom;
+                    font-size: 14px;
+                    background: #fff;
 
-            .canidates--empty {
-                display: inline-block;
-                width: 20%;
-            }
-            .canidates--canidate {
-                display: inline-block;
-                width: 15%;
-                text-align: center;
-                font-size: 14px;
-
-                .canidate--image {
-                    width: 100%;
-                    height: auto;
+                    .canidate--image {
+                        width: 100%;
+                        max-width: 124px;
+                        height: auto;
+                    }
                 }
             }
         }
     }
+    .wep--stickywrapper.wep--fixed {
+        position: fixed;
+        top: 0;
+        right: 0;
+        left: 0;
 
-    .wep--poll {
-        overflow-y: auto;
-        border-top: 1px solid #444;
-
-        .poll--topic {
-            width: 20%;
-            margin: 15px 0 0 0;
-            padding: 0;
-            float: left;
-            font-size: 14px;
+        .canidates--canidate {
+            border-bottom: 1px solid #999;
         }
+    }
 
-        .poll--group {
-            width: 80%;
-            float: right;
-            border: 0;
-            border-collapse: collapse;
-            border-spacing: 0;
+    .wep--polls {
+        border-bottom: 1px solid #444;
 
-            .poll--category {
-                border-bottom: 1px solid #e5e5e5;
+        .wep--poll {
+            overflow-y: auto;
+            border-top: 1px solid #444;
 
-                td:nth-child(3){
-                    border-right: 1px solid #000;
-                }
-                .category--name {
-                    display: inline-block;
-                    width: 20%;
-                    font-size: 12px;
-                }
-                .category--result {
-                    display: inline-block;
-                    width: 15%;
-                    text-align: center;
-                    color: #000;
-                    /*
-                    -webkit-font-smoothing: antialiased;
-                    -moz-osx-font-smoothing: grayscale;
-                    font-smooth: always;
-                    text-shadow: 1px 1px 0px #e5e5e5, -1px -1px 0px #e5e5e5, 1px -1px 0px #e5e5e5, -1px 1px 0px #e5e5e5;
-                    */
-                    .result--percent {
+            .poll--topic {
+                width: 20%;
+                margin: 15px 0 0 0;
+                padding: 0;
+                float: left;
+                font-size: 14px;
+            }
+
+            .poll--group {
+                width: 80%;
+                float: right;
+                border: 0;
+                border-collapse: collapse;
+                border-spacing: 0;
+
+                .poll--category {
+                    border-bottom: 1px solid #e5e5e5;
+
+                    td:nth-child(3){
+                        border-right: 1px solid #000;
+                    }
+                    .category--name {
                         display: inline-block;
-                        padding: 20px;
-                        font-size: 14px;
+                        width: 20%;
+                        font-size: 12px;
+                    }
+                    .category--result {
+                        display: inline-block;
+                        width: 15%;
+                        text-align: center;
+                        color: #000;
+
+                        .result--percent {
+                            display: inline-block;
+                            padding: 20px;
+                            font-size: 14px;
+                        }
                     }
                 }
+                .poll--category:last-of-type {
+                    border-bottom: 0;
+                }
             }
-            .poll--category:last-of-type {
-                border-bottom: 0;
+        }
+    }
+}
+@media screen and (max-width: 628px) {
+    #wiscExitPoll {
+        .wep--header {
+            .header--group {
+                width: 100%;
+                float: none;
+            }
+        }
+        .wep--polls {
+            .wep--poll {
+                .poll--topic {
+                    width: 100%;
+                    float: none;
+                    margin: 10px 0;
+                    font-size: 16px;
+                }
+                .poll--group {
+                    width: 100%;
+                    float: none;
+
+                    .poll--category {
+                        .category--result {
+                            .result--percent {
+                                padding: 10px;
+                            }
+                        }
+                    }
+                }
             }
         }
     }

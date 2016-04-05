@@ -7,65 +7,90 @@
   line-height: 1.4;
   color: #222; }
 
-#wiscExitPoll .wep--header {
+#wiscExitPoll .wep--stickywrapper .wep--header {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
   overflow-y: auto; }
-  #wiscExitPoll .wep--header .header--group {
+  #wiscExitPoll .wep--stickywrapper .wep--header .header--group {
     width: 80%;
     float: right;
     border: 0;
     border-collapse: collapse;
     border-spacing: 0; }
-    #wiscExitPoll .wep--header .header--group .canidates--empty {
+    #wiscExitPoll .wep--stickywrapper .wep--header .header--group .canidates--empty {
       display: inline-block;
       width: 20%; }
-    #wiscExitPoll .wep--header .header--group .canidates--canidate {
+    #wiscExitPoll .wep--stickywrapper .wep--header .header--group .canidates--canidate {
       display: inline-block;
       width: 15%;
       text-align: center;
-      font-size: 14px; }
-      #wiscExitPoll .wep--header .header--group .canidates--canidate .canidate--image {
+      vertical-align: bottom;
+      font-size: 14px;
+      background: #fff; }
+      #wiscExitPoll .wep--stickywrapper .wep--header .header--group .canidates--canidate .canidate--image {
         width: 100%;
+        max-width: 124px;
         height: auto; }
 
-#wiscExitPoll .wep--poll {
-  overflow-y: auto;
-  border-top: 1px solid #444; }
-  #wiscExitPoll .wep--poll .poll--topic {
-    width: 20%;
-    margin: 15px 0 0 0;
-    padding: 0;
-    float: left;
-    font-size: 14px; }
-  #wiscExitPoll .wep--poll .poll--group {
-    width: 80%;
-    float: right;
-    border: 0;
-    border-collapse: collapse;
-    border-spacing: 0; }
-    #wiscExitPoll .wep--poll .poll--group .poll--category {
-      border-bottom: 1px solid #e5e5e5; }
-      #wiscExitPoll .wep--poll .poll--group .poll--category td:nth-child(3) {
-        border-right: 1px solid #000; }
-      #wiscExitPoll .wep--poll .poll--group .poll--category .category--name {
-        display: inline-block;
-        width: 20%;
-        font-size: 12px; }
-      #wiscExitPoll .wep--poll .poll--group .poll--category .category--result {
-        display: inline-block;
-        width: 15%;
-        text-align: center;
-        color: #000;
-        /*
-                    -webkit-font-smoothing: antialiased;
-                    -moz-osx-font-smoothing: grayscale;
-                    font-smooth: always;
-                    text-shadow: 1px 1px 0px #e5e5e5, -1px -1px 0px #e5e5e5, 1px -1px 0px #e5e5e5, -1px 1px 0px #e5e5e5;
-                    */ }
-        #wiscExitPoll .wep--poll .poll--group .poll--category .category--result .result--percent {
+#wiscExitPoll .wep--stickywrapper.wep--fixed {
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0; }
+  #wiscExitPoll .wep--stickywrapper.wep--fixed .canidates--canidate {
+    border-bottom: 1px solid #999; }
+
+#wiscExitPoll .wep--polls {
+  border-bottom: 1px solid #444; }
+  #wiscExitPoll .wep--polls .wep--poll {
+    overflow-y: auto;
+    border-top: 1px solid #444; }
+    #wiscExitPoll .wep--polls .wep--poll .poll--topic {
+      width: 20%;
+      margin: 15px 0 0 0;
+      padding: 0;
+      float: left;
+      font-size: 14px; }
+    #wiscExitPoll .wep--polls .wep--poll .poll--group {
+      width: 80%;
+      float: right;
+      border: 0;
+      border-collapse: collapse;
+      border-spacing: 0; }
+      #wiscExitPoll .wep--polls .wep--poll .poll--group .poll--category {
+        border-bottom: 1px solid #e5e5e5; }
+        #wiscExitPoll .wep--polls .wep--poll .poll--group .poll--category td:nth-child(3) {
+          border-right: 1px solid #000; }
+        #wiscExitPoll .wep--polls .wep--poll .poll--group .poll--category .category--name {
           display: inline-block;
-          padding: 20px;
-          font-size: 14px; }
-    #wiscExitPoll .wep--poll .poll--group .poll--category:last-of-type {
-      border-bottom: 0; }
+          width: 20%;
+          font-size: 12px; }
+        #wiscExitPoll .wep--polls .wep--poll .poll--group .poll--category .category--result {
+          display: inline-block;
+          width: 15%;
+          text-align: center;
+          color: #000; }
+          #wiscExitPoll .wep--polls .wep--poll .poll--group .poll--category .category--result .result--percent {
+            display: inline-block;
+            padding: 20px;
+            font-size: 14px; }
+      #wiscExitPoll .wep--polls .wep--poll .poll--group .poll--category:last-of-type {
+        border-bottom: 0; }
+
+@media screen and (max-width: 628px) {
+  #wiscExitPoll .wep--header .header--group {
+    width: 100%;
+    float: none; }
+  #wiscExitPoll .wep--polls .wep--poll .poll--topic {
+    width: 100%;
+    float: none;
+    margin: 10px 0;
+    font-size: 16px; }
+  #wiscExitPoll .wep--polls .wep--poll .poll--group {
+    width: 100%;
+    float: none; }
+    #wiscExitPoll .wep--polls .wep--poll .poll--group .poll--category .category--result .result--percent {
+      padding: 10px; } }
 
 /*# sourceMappingURL=styles.css.map*/
