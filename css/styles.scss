@@ -1,14 +1,11 @@
 #wiscExitPoll {
     width: 100%;
-    max-width: 1000px;
+    max-width: 1100px;
     margin: 0 auto;
     font-size: 16px;
     font-family: Verdana,Arial,sans-serif;
 
     .wep--header {
-        width: 100%;
-        max-width: 1000px;
-        margin: 0 auto;
         overflow-y: auto;
 
         .header--group {
@@ -47,10 +44,10 @@
 
             .poll--topic {
                 width: 18%;
-                margin: 10px 0 0 0;
+                margin: 5px 0 0 0;
                 padding: 0;
                 float: left;
-                font-size: 16px;
+                font-size: 18px;
                 line-height: 1.4;
             }
 
@@ -70,11 +67,19 @@
                     .category--name {
                         width: 25%;
                         font-size: 14px;
+                        font-weight: bold;
                     }
-                    .category--percent {
+                    .category--percentDem,
+                    .category--percentRep {
                         font-size: 12px;
                         font-style: italic;
-                        color: #999;
+                        font-weight: normal;
+                    }
+                    .category--percentDem {
+                        color: rgba(18,100,181,.7);
+                    }
+                    .category--percentRep {
+                        color: rgba(181,32,22,.7);
                     }
                     .category--result {
                         padding: 20px;

@@ -16,7 +16,7 @@
     "webpack": "^1.12.14"
   },
   "scripts": {
-    "start": "webpack"
+    "start": "webpack -p"
   },
   "repository": {
     "type": "git",
