@@ -10,18 +10,6 @@ $(document).ready(function() {
         var response = JSON.parse(data);
         render(response.data);
     });
-    /*
-    var stickyTop = $('.wep--stickywrapper').offset().top;
-    $(window).scroll(function() {
-        if ($(this).scrollTop() >= top) {
-            $('.wep--stickywrapper').addClass('wep--fixed');
-            $('.wep--polls').css({marginTop:$('.wep--stickywrapper').height()+'px'});
-        } else {
-            $('.wep--stickywrapper').removeClass('wep--fixed');
-            $('.wep--polls').css({marginTop:'0px'});
-        }
-    });
-    */
 });
 
 var render = function(data) {

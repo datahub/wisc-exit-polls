@@ -1,4 +1,4 @@
-<link href="http://media.dhb.io/wisc-exit-polls/styles.css" rel="stylesheet">
+<link href="http://media.dhb.io/wisc-exit-polls/styles.css?v5" rel="stylesheet">
     <div id="wiscExitPoll">
         <div class="wep--header">
             <table class="header--group">
@@ -41,7 +41,9 @@
 </script>
 <script type="text/template" id="template--category">
     <tr class="poll--category">
-        <td class="category--name"><%= category %></td>
+        <td class="category--name"><%= category %>
+            <% if (categoryPercent !== "-") { %><br><span class="category--percent"><% print(Math.round(parseFloat(categoryPercent,10) * 100)) %>% of voters <% } %>
+            </td>
         <td class="category--result" style="background:rgba(18,100,181,<% print(clinton !== "-" ? clinton : 0); %>)">
             <span class="result--percent"><% print(clinton !== "-" ? Math.round(parseFloat(clinton,10) * 100) + "%" : "&nbsp;-&nbsp;"); %></span>
         </td>
@@ -59,4 +61,4 @@
         </td>
     </tr>
 </script>
-<script src="http://media.dhb.io/wisc-exit-polls/bundle.js"></script>
+<script src="http://media.dhb.io/wisc-exit-polls/bundle.js?v4"></script>
