@@ -1,6 +1,6 @@
 {
   "name": "wisc-exit-polls",
-  "version": "0.1.0",
+  "version": "1.1.0",
   "description": "April 5th Wisconsin Primary Election Exit Polls",
   "main": "webpack.config.js",
   "dependencies": {
@@ -20,7 +20,7 @@
   },
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/datahub/wisc-exit-polls.git"
   },
   "author": "datahub",
   "license": ""
