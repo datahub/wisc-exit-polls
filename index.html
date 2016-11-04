@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="css/styles.css" rel="stylesheet">
+    <link href="dist/styles.css" rel="stylesheet">
     <style>
         /* similuated page */
         .container {
@@ -25,25 +25,21 @@
                         <td class="canidates--empty">
                         </td>
                         <td class="canidates--canidate">
-                            <img class="canidate--image" src="http://media.jrn.com/images/clinton_exitpoll.jpeg">
+                            <img class="canidate--image" src="media/clinton_exitpoll.jpeg">
                             Clinton
                         </td>
                         <td class="canidates--canidate">
-                            <img class="canidate--image" src="http://media.jrn.com/images/sanders_exitpoll.jpeg">
-                            Sanders
-                        </td>
-                        <td class="canidates--canidate">
-                            <img class="canidate--image" src="http://media.jrn.com/images/cruz_exitpoll.jpeg">
-                            Cruz
-                        </td>
-                        <td class="canidates--canidate">
-                            <img class="canidate--image" src="http://media.jrn.com/images/kasich_exitpoll.jpeg">
-                            Kasich
-                        </td>
-                        <td class="canidates--canidate">
-                            <img class="canidate--image" src="http://media.jrn.com/images/trump_exitpoll.jpeg">
+                            <img class="canidate--image" src="media/trump_exitpoll.jpeg">
                             Trump
                         </td>
+                        <td class="canidates--canidate">
+                            <img class="canidate--image" src="media/johnson_exitpoll.jpg">
+                            Johnson
+                        </td> 
+                        <td class="canidates--canidate">
+                            <img class="canidate--image" src="media/stein_exitpoll.jpg">
+                            Stein
+                        </td>                   
                     </tr>
                 </table>
             </div>
@@ -62,26 +58,22 @@
     <script type="text/template" id="template--category">
         <tr class="poll--category">
             <td class="category--name"><%= category %>
-                <% if (categoryPercentDem !== "-") { %><br><span class="category--percentDem"><% print(Math.round(parseFloat(categoryPercentDem,10) * 100)) %>% of Dem. voters </span><% } %>
-                <% if (categoryPercentRep !== "-") { %><br><span class="category--percentRep"><% print(Math.round(parseFloat(categoryPercentRep,10) * 100)) %>% of Rep. voters </span><% } %>
+                <% if (categoryPercentOfVoters !== "-") { %><br><br><span class="category--percentVoters"><% print(Math.round(parseFloat(categoryPercentOfVoters,10) * 100)) %>% of voters </span><% } %>
             </td>
-            <td class="category--result" style="background:rgba(18,100,181,<% print(clinton !== "-" ? clinton : 0); %>)">
+            <td class="category--result" style="background:rgba(136,86,167,<% print(clinton !== "-" ? clinton : 0); %>)">
                 <span class="result--percent"><% print(clinton !== "-" ? Math.round(parseFloat(clinton,10) * 100) + "%" : "&nbsp;-&nbsp;"); %></span>
             </td>
-            <td class="category--result" style="background:rgba(18,100,181,<% print(sanders !== "-" ? sanders : 0); %>)">
-                <span class="result--percent"><% print(sanders !== "-" ? Math.round(parseFloat(sanders,10) * 100) + "%" : "&nbsp;-&nbsp;"); %></span>
-            </td>
-            <td class="category--result" style="background:rgba(181,32,22,<% print(cruz !== "-" ? cruz  : 0); %>)">
-                <span class="result--percent"><% print(cruz !== "-" ? Math.round(parseFloat(cruz,10) * 100) + "%" : "&nbsp;-&nbsp;"); %></span>
-            </td>
-            <td class="category--result" style="background:rgba(181,32,22,<% print(kasich !== "-" ? kasich : 0); %>)">
-                <span class="result--percent"><% print(kasich !== "-" ? Math.round(parseFloat(kasich,10) * 100) + "%" : "&nbsp;-&nbsp;"); %></span>
-            </td>
-            <td class="category--result" style="background:rgba(181,32,22,<% print(trump !== "-" ? trump : 0); %>)">
+            <td class="category--result" style="background:rgba(136,86,167,<% print(trump !== "-" ? trump : 0); %>)">
                 <span class="result--percent"><% print(trump !== "-" ? Math.round(parseFloat(trump,10) * 100) + "%" : "&nbsp;-&nbsp;"); %></span>
+            </td>
+            <td class="category--result" style="background:rgba(136,86,167,<% print(johnson !== "-" ? johnson  : 0); %>)">
+                <span class="result--percent"><% print(johnson !== "-" ? Math.round(parseFloat(johnson,10) * 100) + "%" : "&nbsp;-&nbsp;"); %></span>
+            </td>
+            <td class="category--result" style="background:rgba(136,86,167,<% print(stein !== "-" ? stein : 0); %>)">
+                <span class="result--percent"><% print(stein !== "-" ? Math.round(parseFloat(stein,10) * 100) + "%" : "&nbsp;-&nbsp;"); %></span>
             </td>
         </tr>
     </script>
-    <script src="js/bundle.js"></script>
+    <script src="dist/bundle.js"></script>
 </body>
 </html>

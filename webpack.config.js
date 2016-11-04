@@ -1,18 +1,25 @@
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var webpack = require('webpack');
 module.exports = {
-    entry: "./js/app.js",
+    entry: "./src/app.js",
     output: {
-        filename: "./js/bundle.js"
+        filename: "./dist/bundle.js"
     },
-    devtool: "source-map",
+    //devtool: "source-map",
     module: {
-        loaders: [{
+        loaders: [
+            {
                 test: /\.scss$/,
                 loader: ExtractTextPlugin.extract(["css?sourceMap", "sass?sourceMap"])
-            }]
+            }
+        ]
     },
     plugins: [
-        new ExtractTextPlugin("./css/styles.css")
-    ],
-    watch: true
+        new ExtractTextPlugin("./dist/styles.css")
+        ,new webpack.DefinePlugin({
+            'process.env': {
+              'NODE_ENV': JSON.stringify('production')
+            }
+        })
+    ]
 }

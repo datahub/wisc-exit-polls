@@ -3,7 +3,7 @@
     max-width: 1100px;
     margin: 0 auto;
     font-size: 16px;
-    font-family: Verdana,Arial,sans-serif;
+    font-family: 'Futura Today',Verdana,Arial,sans-serif;
 
     .wep--header {
         overflow-y: auto;
@@ -61,25 +61,16 @@
                 .poll--category {
                     border-bottom: 1px solid #e5e5e5;
 
-                    td:nth-child(3){
-                        border-right: 1px solid #000;
-                    }
                     .category--name {
                         width: 25%;
                         font-size: 14px;
                         font-weight: bold;
                     }
-                    .category--percentDem,
-                    .category--percentRep {
+                    .category--percentVoters {
                         font-size: 12px;
                         font-style: italic;
                         font-weight: normal;
-                    }
-                    .category--percentDem {
-                        color: rgba(18,100,181,.7);
-                    }
-                    .category--percentRep {
-                        color: rgba(181,32,22,.7);
+                        color: #555;
                     }
                     .category--result {
                         padding: 20px;

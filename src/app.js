@@ -1,10 +1,10 @@
-require("../css/styles.scss");
+require("./styles.scss");
 
 var $ = require("jquery");
 var _tpl = require("lodash/template");
 
 $(document).ready(function() {
-    var url = 'http://media.dhb.io/data/wisc-april-exit-polls.json?r=';
+    var url = 'data/wisc-nov-exit-polls.json?c=';
     var cache = Math.floor(Date.now() / 1000);
     $.getJSON( url + cache, function( data ) {
         var response = JSON.parse(data);
